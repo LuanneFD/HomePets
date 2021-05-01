@@ -10,35 +10,15 @@ import {
   IoIosPeople
 } from 'react-icons/io';
 
-import { RiHandCoinLine, RiBarcodeBoxLine, RiProductHuntLine, RiUser3Line, RiRefund2Line, RiLogoutBoxLine } from "react-icons/ri";
+import { RiUser3Line, RiLogoutBoxLine } from "react-icons/ri";
 export default function CMenu({ history }) {
 
   return (
     <>
       <Menu>
-        <Button to='/providers'>
-          <RiHandCoinLine />
-          <span>Fornecedores</span>
-        </Button>
-
-        <Button to='/products'>
-          <RiProductHuntLine />
-          <span>Produtos</span>
-        </Button>
-
-        <Button to='/salesmans'>
+        <Button to='/perfil'>
           <RiUser3Line />
-          <span>Vendedores</span>
-        </Button>
-
-        <Button to='/sales'>
-          <RiBarcodeBoxLine />
-          <span>Vendas</span>
-        </Button>
-
-        <Button to='/cashs'>
-          <RiRefund2Line />
-          <span>Controle de caixa</span>
+          <span>Perfil</span>
         </Button>
 
         <ButtonLogout onClick={() => logout()}>
