@@ -10,7 +10,7 @@ export const Container = styled.div`
   .filter {
     width: 100%;
     height: 100%;
-    background-color: rgba(161, 197, 212, 1);
+    background-color: rgba(77, 179, 125, 0.61);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +112,7 @@ export const Container = styled.div`
         height: 50px;
         font-size: 18px;
         color: white;
-        background-color: #c74d39;
+        background-color: #3498db;
         border-radius: 25px;
         border: 0;
         letter-spacing: 1px;

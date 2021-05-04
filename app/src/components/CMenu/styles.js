@@ -5,10 +5,14 @@ import { Link } from 'react-router-dom';
 
 export const Menu = styled.nav`
   width: 230px;
-  padding: 25px;
-  height: calc(100vh - 100px);
+  padding: 25px 15px;
+  height: calc(100vh - 75px);
   box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.1);
   box-shadow: 0 3px 30px rgba(0,0,0,.1), 0 3px 20px rgba(0,0,0,.1);
+
+  label{
+    display: block; margin-bottom: 25px; 
+  }
 `;
 
 export const Button = styled(Link)`
