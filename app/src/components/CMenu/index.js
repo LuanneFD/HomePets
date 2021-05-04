@@ -5,6 +5,7 @@ import { sessionGet } from '../../session';
 import { Menu, Button, ButtonLogout } from './styles';
 import { MdPets } from 'react-icons/md';
 import { RiUser3Line, RiLogoutBoxLine } from "react-icons/ri";
+import { FaClipboardList } from "react-icons/fa";
 
 export default function CMenu({ history }) {
 
@@ -20,6 +21,12 @@ export default function CMenu({ history }) {
           <Button to='/meupet'>
             <MdPets />
             <span>Meus Pets</span>
+          </Button>
+        )}
+        {sessionGet('type') == 'P' && (
+          <Button to='/meuservico'>
+            <FaClipboardList />
+            <span>Meus Serviços</span>
           </Button>
         )}
         <ButtonLogout onClick={() => logout()}>
