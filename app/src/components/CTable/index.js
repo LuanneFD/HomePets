@@ -68,7 +68,7 @@ export default function CTable({ titles, values, indexes, indexesSearch, FormCus
         <div className='wrapbuttons'>
           <CButton click={() => { setShowModal('add'); setItem({}); }} cstyle='success small' title={(<><MdPlaylistAdd /> Adicionar</>)} />
           <CButton
-            disabled={!(selectedItems.length > 0)}
+            disabled={(selectedItems.length <= 0)}
             click={() => setShowModal('delete')} cstyle='danger small'
             title={(<><MdDelete /> Excluir</>)}
           />

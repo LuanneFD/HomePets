@@ -3,7 +3,7 @@ module.exports = {
   host: 'localhost',
   username: 'root',
   password: '',
-  database: 'controlaquidb',
+  database: 'homepets',
   logging: false,
   define: {
     timestamp: true,

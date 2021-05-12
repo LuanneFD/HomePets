@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react';
 import { isLogged } from '../../session';
-
-import CFormSearch from '../CFormSearch';
-
-import { MdMenu, MdNotificationsNone, MdAttachMoney } from 'react-icons/md';
-
-import { Topbar, Button } from './styles';
+import { Topbar } from './styles';
 
 export default function CTopbar() {
 
@@ -18,7 +13,7 @@ export default function CTopbar() {
       <div className="leftwrap">
       </div>
       <div className="centerwrap">
-        <h1>Control<span>aqui</span></h1>
+        <h1>HomePets</h1>
       </div>
       <div className="rightwrap">
       </div>

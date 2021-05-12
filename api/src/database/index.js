@@ -1,16 +1,13 @@
 import Sequelize from 'sequelize';
 
 // importação dos models
-import Provider from '../app/models/Provider';
-import Product from '../app/models/Product';
-import Salesman from '../app/models/Salesman';
-import Sale from '../app/models/Sale';
-import SaleHasProduct from '../app/models/SaleHasProduct';
-import Cash from '../app/models/Cash';
+import User from '../app/models/User';
+import Pet from '../app/models/Pet';
+import Service from '../app/models/Service';
 
 import databaseConfig from '../config/database';
 
-const models = [Provider, Product, Salesman, Sale, SaleHasProduct, Cash];
+const models = [User, Pet, Service];
 
 class Database {
   constructor() {
@@ -20,8 +17,8 @@ class Database {
   init() {
     this.connection = new Sequelize(databaseConfig);
 
-    models.map(model => model.init(this.connection));
-    models.map(
+    models.forEach(model => model.init(this.connection));
+    models.forEach(
       model => model.associate && model.associate(this.connection.models)
     );
   }

@@ -26,7 +26,8 @@ export const Container = styled.div`
     border-top: 3px solid ${colors.secondary};
     border-radius: 5px;
     width: 20%;
-
+ 
+ a { color:white}
     h1 {
       color: white;
       text-transform: uppercase;
