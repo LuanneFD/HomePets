@@ -58,8 +58,8 @@ class PetsController {
 
     const listId = id.split(',');
 
-    listId.map(async id => {
-      await Pet.destroy({ where: { id } });
+    listId.map(async item => {
+      await Pet.destroy({ where: { item } });
     });
 
     return res.json({

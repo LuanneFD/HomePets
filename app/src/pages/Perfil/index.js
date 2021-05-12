@@ -9,7 +9,7 @@ import CButton from '../../components/CButton';
 import { parseISO, format } from 'date-fns';
 import { zonedTimeToUtc } from 'date-fns-tz';
 import { Page } from './styles';
-import { Container, TitlePage, Painel } from '../../styles/scglobal';
+import { Container, Painel } from '../../styles/scglobal';
 import { sessionGet } from '../../session';
 import { toast } from 'react-toastify';
 
@@ -46,13 +46,13 @@ export default function Perfil() {
     const handleUpdateUser = async e => {
         e.preventDefault();
 
-        const response = (await api.put(`/users/${sessionGet('id')}`, {
+        await api.put(`/users/${sessionGet('id')}`, {
             name,
             email,
             type,
             date_of_birth: dateB,
             password
-        })).data;
+        }).data;
 
         toast.success('Perfil atualizado com sucesso!');
     }
