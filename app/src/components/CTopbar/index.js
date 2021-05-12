@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { isLogged } from '../../session';
-import { Topbar, Button } from './styles';
+import { Topbar } from './styles';
 
 export default function CTopbar() {
 
