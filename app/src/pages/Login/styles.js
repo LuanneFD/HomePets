@@ -54,7 +54,7 @@ export const Container = styled.div`
       padding: 10px 0;
       font-size: 18px;
       color: white;
-      background-color: ${colors.secondary};
+      background-color: #00a6ff;
       border-radius: 10px;
       text-transform: uppercase;
       border: 0;

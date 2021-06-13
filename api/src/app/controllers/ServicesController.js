@@ -31,6 +31,11 @@ class ServicesController {
         return res.status(200).json(response);
     }
 
+    async indexAll(req, res) {
+        const response = await Service.findAll();
+        return res.status(200).json(response);
+    }
+
     async update(req, res) {
         const { id } = req.params;
         const { name, duration, price, id_user } = req.body;

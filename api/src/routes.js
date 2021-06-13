@@ -18,6 +18,7 @@ routes.put('/pets/:id', PetsController.update);
 routes.delete('/pets/:id', PetsController.destroy);
 
 routes.get('/services/:id', ServicesController.index);
+routes.get('/services', ServicesController.indexAll);
 routes.post('/services', ServicesController.store);
 routes.put('/services/:id', ServicesController.update);
 routes.delete('/services/:id', ServicesController.destroy);

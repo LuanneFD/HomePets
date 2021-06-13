@@ -4,6 +4,7 @@ import { sessionGet } from '../../session';
 
 import { Menu, Button, ButtonLogout } from './styles';
 import { MdPets } from 'react-icons/md';
+import { BsCardList } from 'react-icons/bs';
 import { RiUser3Line, RiLogoutBoxLine } from "react-icons/ri";
 import { FaClipboardList } from "react-icons/fa";
 
@@ -13,18 +14,24 @@ export default function CMenu({ history }) {
     <>
       <Menu>
         <label>Olá {sessionGet('name')}</label>
-        <Button to='/perfil'>
+        <Button onClick={() => window.location = '/perfil'}>
           <RiUser3Line />
           <span>Perfil</span>
         </Button>
         {sessionGet('type') == 'D' && (
-          <Button to='/meupet'>
-            <MdPets />
-            <span>Meus Pets</span>
-          </Button>
+          <>
+            <Button onClick={() => window.location = '/meupet'}>
+              <MdPets />
+              <span>Meus Pets</span>
+            </Button>
+            <Button onClick={() => window.location = '/servicos'}>
+              <BsCardList />
+              <span>Serviços</span>
+            </Button>
+          </>
         )}
         {sessionGet('type') == 'P' && (
-          <Button to='/meuservico'>
+          <Button onClick={() => window.location = '/meuservico'}>
             <FaClipboardList />
             <span>Meus Serviços</span>
           </Button>
