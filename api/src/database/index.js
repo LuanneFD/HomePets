@@ -4,10 +4,11 @@ import Sequelize from 'sequelize';
 import User from '../app/models/User';
 import Pet from '../app/models/Pet';
 import Service from '../app/models/Service';
+import Schedule from '../app/models/Schedule';
 
 import databaseConfig from '../config/database';
 
-const models = [User, Pet, Service];
+const models = [User, Pet, Service, Schedule];
 
 class Database {
   constructor() {

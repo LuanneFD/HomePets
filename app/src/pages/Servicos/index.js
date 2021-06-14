@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import CHeader from '../../components/CHeader';
 
-import { Page } from './styles';
+import { Page, Table } from './styles';
 import { Container, TitlePage, Painel } from '../../styles/scglobal';
 
 
@@ -16,6 +16,7 @@ export default function Servicos() {
     const getServices = async () => {
         const response = (await api.get(`/services`)).data;
         setServices(response);
+        console.log(response);
     };
 
     return (

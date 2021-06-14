@@ -4,7 +4,7 @@ import { sessionGet } from '../../session';
 
 import { Menu, Button, ButtonLogout } from './styles';
 import { MdPets } from 'react-icons/md';
-import { BsCardList } from 'react-icons/bs';
+import { BsCardList, BsListCheck } from 'react-icons/bs';
 import { RiUser3Line, RiLogoutBoxLine } from "react-icons/ri";
 import { FaClipboardList } from "react-icons/fa";
 
@@ -27,6 +27,10 @@ export default function CMenu({ history }) {
             <Button onClick={() => window.location = '/servicos'}>
               <BsCardList />
               <span>Serviços</span>
+            </Button>
+            <Button onClick={() => window.location = '/agendarservico'}>
+              <BsListCheck />
+              <span>Serviços Contratados</span>
             </Button>
           </>
         )}

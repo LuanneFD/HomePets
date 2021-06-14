@@ -1,4 +1,5 @@
 import Service from '../models/Service';
+import User from '../models/User';
 
 class ServicesController {
     async store(req, res) {
@@ -20,19 +21,27 @@ class ServicesController {
     }
 
     async index(req, res) {
-        const { id } = req.params;
-        const response = await Service.findAll({
-            raw: true,
-            where: [
-                { id_user: id }
-            ]
-        });
-
-        return res.status(200).json(response);
-    }
-
-    async indexAll(req, res) {
-        const response = await Service.findAll();
+        const { id } = req.query;
+        var response;
+        if (id) {
+            response = await Service.findAll({
+                raw: true,
+                where: [
+                    { id_user: id }
+                ],
+                include: [
+                    { model: User, as: 'user' }
+                ]
+            });
+        }
+        else {
+            response = await Service.findAll({
+                include: [
+                    { model: User, as: 'user' }
+                ]
+            }
+            );
+        }
         return res.status(200).json(response);
     }
 
