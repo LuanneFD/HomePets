@@ -79,8 +79,8 @@ class SchedulesController {
 
         const listId = id.split(',');
 
-        listId.map(async iditem => {
-            await Schedule.destroy({ where: { iditem } });
+        listId.map(async idItem => {
+            await Schedule.destroy({ where: { id: idItem } });
         });
 
         return res.json({

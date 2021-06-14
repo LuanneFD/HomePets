@@ -71,7 +71,7 @@ class ServicesController {
         const listId = id.split(',');
 
         listId.map(async item => {
-            await Service.destroy({ where: { item } });
+            await Service.destroy({ where: { id: item } });
         });
 
         return res.json({
