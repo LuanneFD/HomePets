@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
 import colors from '../../presets/colors';
-import { Link } from 'react-router-dom';
 
 export const Menu = styled.nav`
   width: 230px;

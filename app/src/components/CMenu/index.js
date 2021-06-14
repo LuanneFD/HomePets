@@ -17,18 +17,6 @@ export default function CMenu({ history }) {
           <span>Perfil</span>
         </Button>
         {sessionGet('type') == 'D' && (
-<<<<<<< HEAD
-          <Button onClick={() => window.location = '/meupet'}>
-            <MdPets />
-            <span>Meus Pets</span>
-          </Button>
-        )}
-        {sessionGet('type') == 'P' && (
-          <Button onClick={() => window.location = '/meuservico'}>
-            <FaClipboardList />
-            <span>Meus Serviços</span>
-          </Button>
-=======
           <>
             <Button onClick={() => window.location = '/meupet'}>
               <MdPets />
@@ -55,7 +43,6 @@ export default function CMenu({ history }) {
               <span>Serviços Agendados</span>
             </Button>
           </>
->>>>>>> dev
         )}
         <ButtonLogout onClick={() => logout()}>
           <RiLogoutBoxLine />

@@ -16,7 +16,6 @@ export default function ServicosAgendados() {
     const getSchedules = async () => {
         const response = (await api.get(`/schedules`)).data;
         setSchedules(response);
-        console.log(response);
     };
 
     const filterSchedules = () => {
