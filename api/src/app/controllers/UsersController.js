@@ -41,6 +41,14 @@ class UserController {
         return res.json(users);
     }
 
+    async indexPrestador(req, res) {
+        const users = await User.findAll({
+            where: { type: 'P' }
+        });
+
+        return res.json(users);
+    }
+
     async show(req, res) {
         const { id } = req.params;
 

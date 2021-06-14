@@ -15,7 +15,7 @@ export const Menu = styled.nav`
   }
 `;
 
-export const Button = styled(Link)`
+export const Button = styled.button`
   background-color: transparent;
   border: 0;
   display: flex;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { sessionSet, isLogged } from '../../session';
 import { toast } from 'react-toastify';
-
+import { MdPets } from 'react-icons/md';
 import { Container } from './styles';
 
 function Login() {
@@ -36,7 +36,7 @@ function Login() {
   return (
     <Container>
       <form onSubmit={login}>
-        <h1>HomePets</h1>
+        <h1>HomePets <MdPets /></h1>
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail" />
         <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Senha" />
         <button type="submit">Entrar</button>
