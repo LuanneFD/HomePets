@@ -23,22 +23,35 @@ class SchedulesController {
     }
 
     async index(req, res) {
-        const { id } = req.params;
-        const response = await Schedule.findAll({
-            raw: true,
-            where: [
-                { id_user: id }
-            ],
-            include: [
-                {
-                    model: Service, as: 'service',
-                    include: [
-                        { model: User, as: 'user' }
-                    ]
-                },
-                { model: Pet, as: 'pet' }
-            ]
-        });
+        const { id } = req.query;
+        var response;
+        if (id) {
+            response = await Schedule.findAll({
+                raw: true,
+                where: [
+                    { id_user: id }
+                ],
+                include: [
+                    {
+                        model: Service, as: 'service',
+                        include: [
+                            { model: User, as: 'user' }
+                        ]
+                    },
+                    { model: Pet, as: 'pet' }
+                ]
+            });
+        }
+        else {
+            response = await Schedule.findAll({
+                raw: true,
+                include: [
+                    { model: Service, as: 'service' },
+                    { model: Pet, as: 'pet' },
+                    { model: User, as: 'user' }
+                ]
+            });
+        }
         return res.status(200).json(response);
     }
 

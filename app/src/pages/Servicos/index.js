@@ -16,7 +16,6 @@ export default function Servicos() {
     const getServices = async () => {
         const response = (await api.get(`/services`)).data;
         setServices(response);
-        console.log(response);
     };
 
     return (
@@ -24,7 +23,7 @@ export default function Servicos() {
             <CHeader />
             <Container className="container">
 
-                <TitlePage>Serviços</TitlePage>
+                <TitlePage>Serviços Disponíveis</TitlePage>
 
                 <Painel className="painel">
                     <Table>

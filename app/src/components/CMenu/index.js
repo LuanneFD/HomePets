@@ -26,7 +26,7 @@ export default function CMenu({ history }) {
             </Button>
             <Button onClick={() => window.location = '/servicos'}>
               <BsCardList />
-              <span>Serviços</span>
+              <span>Serviços Disponíveis</span>
             </Button>
             <Button onClick={() => window.location = '/agendarservico'}>
               <BsListCheck />
@@ -35,10 +35,16 @@ export default function CMenu({ history }) {
           </>
         )}
         {sessionGet('type') == 'P' && (
-          <Button onClick={() => window.location = '/meuservico'}>
-            <FaClipboardList />
-            <span>Meus Serviços</span>
-          </Button>
+          <>
+            <Button onClick={() => window.location = '/meuservico'}>
+              <FaClipboardList />
+              <span>Meus Serviços</span>
+            </Button>
+            <Button onClick={() => window.location = '/servicosagendados'}>
+              <BsListCheck />
+              <span>Serviços Agendados</span>
+            </Button>
+          </>
         )}
         <ButtonLogout onClick={() => logout()}>
           <RiLogoutBoxLine />

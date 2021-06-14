@@ -9,6 +9,7 @@ import MeuPet from './pages/MeuPet';
 import Servicos from './pages/Servicos';
 import MeuServico from './pages/MeuServico';
 import AgendarServico from './pages/AgendarServico';
+import ServicosAgendados from './pages/ServicosAgendados';
 
 export default function Routes() {
   return (
@@ -21,6 +22,7 @@ export default function Routes() {
       <Route path="/servicos" exact component={Servicos} />
       <Route path="/meuservico" exact component={MeuServico} />
       <Route path="/agendarservico" exact component={AgendarServico} />
+      <Route path="/servicosagendados" exact component={ServicosAgendados} />
     </Switch>
   );
 }

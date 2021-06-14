@@ -20,7 +20,7 @@ class Schedule extends Model {
     static associate(models) {
         this.belongsTo(models.Service, { foreignKey: 'id_service', as: 'service' });
         this.belongsTo(models.Pet, { foreignKey: 'id_pet', as: 'pet' });
-        this.belongsTo(models.User, { foreignKey: 'id_user', as: 'prestador' });
+        this.belongsTo(models.User, { foreignKey: 'id_user', as: 'user' });
     }
 }
 export default Schedule;

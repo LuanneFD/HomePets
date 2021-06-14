@@ -16,8 +16,9 @@ export default function MeuServico() {
     }, []);
 
     const getServices = async () => {
-        const response = (await api.get(`/services/${sessionGet('id')}`)).data;
+        const response = (await api.get(`/services/?id=${sessionGet('id')}`)).data;
         setServices(response);
+        console.log(response);
     };
 
     return (

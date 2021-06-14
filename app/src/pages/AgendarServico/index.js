@@ -16,9 +16,9 @@ export default function AgendarServico() {
     }, []);
 
     const getSchedules = async () => {
-        const response = (await api.get(`/schedules/${sessionGet('id')}`)).data;
+        const response = (await api.get(`/schedules/?id=${sessionGet('id')}`)).data;
         setSchedules(response);
-        console.log(response);
+        console.log(response)
     };
 
     return (
@@ -32,7 +32,7 @@ export default function AgendarServico() {
                     <CTable
                         titles={['#', 'Horário', 'Serviço', 'Valor', 'Prestador', 'Pet']}
                         values={schedules}
-                        indexes={['id', 'time', 'service.name', 'service.user.name', 'service.price', 'pet.name']}
+                        indexes={['id', 'time', 'service.name', 'service.price', 'service.user.name', 'pet.name']}
                         indexesSearch={['service.name']}
                         load={getSchedules}
                         FormCustom={FormSchedules}
